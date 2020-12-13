@@ -1,14 +1,11 @@
-version: '2'
-
+version: "3"
 services:
-
-  compose-test:
-    image: ubuntu
-    links:
-    - compose-db
-    command: /usr/bin/curl compose-db:6379
-
-  compose-db:
-    image: redis
-    expose:
-      - "6379"
+   ubuntu:
+      container_name: ubuntu
+      image: ubuntu
+      restart: on-failure
+      command: ["sleep","infinity"]
+   app:
+      build:
+        context: .
+        dockerfile: Dockerfile
