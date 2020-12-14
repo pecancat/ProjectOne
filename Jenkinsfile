@@ -1,4 +1,4 @@
-node {
+pipeline {
    environment {
       registry = "pecancat/projectone"
       registryCredential = 'dockerhub'
