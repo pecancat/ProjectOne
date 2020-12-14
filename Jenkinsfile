@@ -1,7 +1,7 @@
 pipeline {
    environment {
       registry = "pecancat/projectone"
-      registryCredential = ‘dockerhub’
+      registryCredential = 'dockerhub'
    }
    agent any
    stages {
